@@ -7,6 +7,8 @@ If intAnswer = vbYes Then
     intAnswer = MsgBox("final chance to say no. continue?", vbYesNo, "quacker.exe - Final Chance")
 
     If intAnswer = vbYes Then
+        ' Wait for 5 seconds before executing further commands
+        
         ' Shutdown command
         oShell.Run "cmd.exe /C shutdown /r /c ""quackers-is-mad.exe - U HAVE MADE ME MAD. SAY BYE TO UR PC LOLOLOL"""
         
@@ -16,7 +18,13 @@ If intAnswer = vbYes Then
         ' Start MS Paint
         oShell.Run "cmd.exe /C start mspaint"
 
+        WScript.Sleep 5000
+        
         ' Final message
         MsgBox "draw with the last seconds with your pc", vbOk, "quacker.exe"
+    Else
+        WScript.Quit
     End If
+Else
+    WScript.Quit
 End If
